@@ -1,0 +1,101 @@
+/* TicTacToe Game Styling */
+.tic-tac-toe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--kavia-dark);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-title {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: var(--text-color);
+}
+
+.game-status {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+/* Board styling */
+.board {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.board-row {
+  display: flex;
+}
+
+/* Cell styling */
+.cell {
+  width: 80px;
+  height: 80px;
+  margin: 4px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.2s;
+}
+
+.cell:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cell-x {
+  color: #3498db; /* Blue for X */
+}
+
+.cell-o {
+  color: var(--kavia-orange); /* Orange for O */
+}
+
+.reset-button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--kavia-orange);
+}
+
+.reset-button:hover {
+  background-color: #FF8B4D;
+}
+
+/* Make the game responsive */
+@media (max-width: 480px) {
+  .cell {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+  
+  .game-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+}
